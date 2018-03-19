@@ -1,3 +1,8 @@
+Using link preload as="fetch" double downloads file. What am i missing?
+
+Link: [https://pieh.github.io/link-preload-fetch/](https://pieh.github.io/link-preload-fetch/)
+
+```html
 <head>
     <html>
         <link rel="preload" href="data.json" as="fetch" />
@@ -13,3 +18,7 @@
         </script>
     </body>
 </head>
+```
+
+![Network](./network.png)
+
