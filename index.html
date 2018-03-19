@@ -1,0 +1,15 @@
+<head>
+    <html>
+        <link rel="preload" href="data.json" as="fetch" />
+    </html>
+    <body>
+        test
+        <script>
+            fetch("data.json").then(function(response) {
+                response.json().then(function(json) {
+                    console.log('data', json)
+                })
+            })
+        </script>
+    </body>
+</head>
