@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <link rel="preload" href="data.json" as="fetch" crossorigin="anonymous" />
+    </head>
+    <body>
+        Check developer tools -> network tab
+
+        <ul>
+            <li><a href="index.html">Base</a></li>
+            <li><a href="fetch.html">crossorigin="anonymous" / fetch (not working)</a></li>
+            <li><a href="xhr.html">crossorigin="anonymous" / xhr (working!)</a></li>
+        </ul>
+        <script>
+            var req = new XMLHttpRequest();
+            req.open('GET', 'data.json', true); 
+            req.onreadystatechange = function (aEvt) {
+            if (req.readyState == 4) {
+                if(req.status == 200)
+                    console.log('data', JSON.parse(req.responseText));
+                }
+            };
+            req.send(null);
+        </script>
+    </body>
+</html>
